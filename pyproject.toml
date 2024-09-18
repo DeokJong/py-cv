@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "py-ocr"
+version = "0.1.0"
+description = ""
+authors = ["DeokJong <novelss444@jbnu.ac.kr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pymupdf = "^1.24.10"
+pillow = "^10.4.0"
+opencv-python = "^4.10.0.84"
+cv = "^1.0.0"
+pytesseract = "^0.3.13"
+reportlab = "^4.2.2"
+pdf2image = "^1.17.0"
+tqdm = "^4.66.5"
+easyocr = "^1.7.1"
+pypdf2 = "^3.0.1"
+torchaudio = "^2.4.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+flake8 = "^7.1.1"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.flake8]
+ignore = "E203, E501, W503"
+max-line-length = 88
+exclude = ".git,__pycache__,docs/,old/,build/,dist/"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

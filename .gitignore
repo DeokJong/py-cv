@@ -1,0 +1,8 @@
+*.png
+*.pdf
+*.jpg
+*.gif
+
+.vscode/
+
+/extractGIF/*/
